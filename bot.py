@@ -230,7 +230,7 @@ async def cancel_uploading_and_finish(update: Update, context: ContextTypes.DEFA
     await query.answer()
 
     logging.info('The interaction finished.')
-    await query.edit_message_text(text="Uploading was cancelled.")
+    await query.edit_message_text(text=f'{CROSS_MARK_EMOJI} Uploading was cancelled.')
     return ConversationHandler.END
 
 
